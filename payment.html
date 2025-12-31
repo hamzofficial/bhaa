@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You Byaa♡ - Love Bergerak Lucu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(45deg, #ffb6c1, #ffc0cb, #ff69b4, #ff1493);
+            background-size: 400% 400%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial Rounded MT Bold', sans-serif;
+            animation: gradientBG 15s ease infinite;
+            padding: 20px;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            text-align: center;
+            z-index: 100;
+            position: relative;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(255, 20, 147, 0.3),
+                        0 0 50px rgba(255, 105, 180, 0.4),
+                        inset 0 0 20px rgba(255, 255, 255, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            margin: 20px;
+        }
+        
+        .title {
+            font-size: 5.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0px rgba(255, 20, 147, 0.5),
+                        6px 6px 0px rgba(255, 105, 180, 0.4),
+                        0 0 20px rgba(255, 255, 255, 0.8);
+            position: relative;
+            display: inline-block;
+            animation: titleFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes titleFloat {
+            0%, 100% { transform: translateY(0) rotate(-1deg); }
+            50% { transform: translateY(-15px) rotate(1deg); }
+        }
+        
+        /* Warna dan animasi untuk setiap kata */
+        .i { 
+            color: #ff0066; 
+            display: inline-block;
+            animation: bounce 2s infinite 0.1s;
+        }
+        
+        .love { 
+            color: #ff3388; 
+            display: inline-block;
+            animation: bounce 2s infinite 0.2s;
+        }
+        
+        .you { 
+            color: #ff66aa; 
+            display: inline-block;
+            animation: bounce 2s infinite 0.3s;
+        }
+        
+        .byaa { 
+            color: #ff99cc; 
+            display: inline-block;
+            animation: bounce 2s infinite 0.4s;
+            position: relative;
+        }
+        
+        .heart-symbol { 
+            color: #ff0066; 
+            font-size: 6rem;
+            display: inline-block;
+            animation: heartbeat 1.2s infinite, rotate 4s infinite linear;
+            text-shadow: 0 0 30px rgba(255, 0, 102, 0.8);
+            margin-left: 15px;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Love besar yang bergerak */
+        .big-love {
+            position: absolute;
+            font-size: 8rem;
+            color: #ff0066;
+            opacity: 0.9;
+            z-index: 1;
+            user-select: none;
+            pointer-events: none;
+            text-shadow: 0 0 40px rgba(255, 0, 102, 0.9),
+                         0 0 80px rgba(255, 20, 147, 0.7);
+            animation-duration: 8s, 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear, ease-in-out;
+        }
+        
+        /* Animasi berbeda untuk setiap love */
+        .love1 {
+            animation-name: float1, glow1;
+            top: 10%;
+            left: 5%;
+        }
+        
+        .love2 {
+            animation-name: float2, glow2;
+            top: 70%;
+            right: 10%;
+            font-size: 10rem;
+        }
+        
+        .love3 {
+            animation-name: float3, glow3;
+            top: 20%;
+            right: 15%;
+            font-size: 7rem;
+        }
+        
+        .love4 {
+            animation-name: float4, glow1;
+            bottom: 15%;
+            left: 10%;
+            font-size: 9rem;
+        }
+        
+        .love5 {
+            animation-name: float5, glow2;
+            top: 50%;
+            left: 5%;
+            font-size: 6rem;
+        }
+        
+        .love6 {
+            animation-name: float3, glow3;
+            top: 80%;
+            left: 60%;
+            font-size: 8rem;
+        }
+        
+        .love7 {
+            animation-name: float4, glow1;
+            top: 10%;
+            right: 5%;
+            font-size: 11rem;
+        }
+        
+        .love8 {
+            animation-name: float2, glow2;
+            top: 40%;
+            right: 5%;
+            font-size: 7rem;
+        }
+        
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(40px, -50px) rotate(90deg); }
+            50% { transform: translate(80px, 0) rotate(180deg); }
+            75% { transform: translate(40px, 50px) rotate(270deg); }
+        }
+        
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(-60px, -40px) scale(1.2); }
+            66% { transform: translate(60px, 40px) scale(0.8); }
+        }
+        
+        @keyframes float3 {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(70px, 30px) rotate(90deg); }
+            50% { transform: translate(30px, 70px) rotate(180deg); }
+            75% { transform: translate(-40px, 40px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+        
+        @keyframes float4 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(100px, -30px); }
+        }
+        
+        @keyframes float5 {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(200px, 150px) rotate(360deg); }
+        }
+        
+        @keyframes glow1 {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes glow2 {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.9; }
+        }
+        
+        @keyframes glow3 {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 0.4; }
+        }
+        
+        /* Efek kilau di belakang */
+        .sparkle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            box-shadow: 0 0 10px 2px white;
+            z-index: 2;
+        }
+        
+        /* Pesan lucu */
+        .message {
+            color: white;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            text-shadow: 2px 2px 0px rgba(255, 20, 147, 0.7);
+            padding: 15px 30px;
+            background: rgba(255, 105, 180, 0.3);
+            border-radius: 50px;
+            display: inline-block;
+            animation: messageShake 5s infinite;
+            border: 2px dashed white;
+        }
+        
+        @keyframes messageShake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(1deg); }
+            75% { transform: rotate(-1deg); }
+        }
+        
+        /* Responsif */
+        @media (max-width: 1100px) {
+            .title {
+                font-size: 4rem;
+            }
+            
+            .heart-symbol {
+                font-size: 4.5rem;
+            }
+            
+            .big-love {
+                font-size: 6rem;
+            }
+            
+            .message {
+                font-size: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.8rem;
+            }
+            
+            .heart-symbol {
+                font-size: 3.5rem;
+            }
+            
+            .big-love {
+                font-size: 4rem;
+            }
+            
+            .message {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+            }
+            
+            .container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Love besar yang bergerak -->
+    <div class="big-love love1">❤</div>
+    <div class="big-love love2">💖</div>
+    <div class="big-love love3">💗</div>
+    <div class="big-love love4">💓</div>
+    <div class="big-love love5">💕</div>
+    <div class="big-love love6">💘</div>
+    <div class="big-live love7">💞</div>
+    <div class="big-love love8">💝</div>
+    
+    <div class="container">
+        <h1 class="title">
+            <span class="i">i</span><span class="love">love</span><span class="you">you</span>
+            <span class="byaa">byaa</span><span class="heart-symbol">♡</span>
+        </h1>
+        
+        <p class="message">
+            <i class="fas fa-heart" style="color: #ff0066; margin-right: 10px;"></i>
+            Setiap love bergerak dengan ceria untukmu!
+            <i class="fas fa-heart" style="color: #ff0066; margin-left: 10px;"></i>
+        </p>
+    </div>
+
+    <script>
+        // Membuat efek kilau acak
+        function createSparkles() {
+            setInterval(() => {
+                // Buat maksimal 3 sparkle sekaligus
+                for (let i = 0; i < 3; i++) {
+                    // Hanya buat sparkle dengan probabilitas 30%
+                    if (Math.random() > 0.7) {
+                        const sparkle = document.createElement('div');
+                        sparkle.classList.add('sparkle');
+                        
+                        // Posisi acak di layar
+                        const x = Math.random() * window.innerWidth;
+                        const y = Math.random() * window.innerHeight;
+                        
+                        // Ukuran acak
+                        const size = Math.random() * 8 + 4;
+                        
+                        sparkle.style.left = `${x}px`;
+                        sparkle.style.top = `${y}px`;
+                        sparkle.style.width = `${size}px`;
+                        sparkle.style.height = `${size}px`;
+                        
+                        document.body.appendChild(sparkle);
+                        
+                        // Animasi sparkle
+                        sparkle.animate([
+                            { opacity: 0, transform: 'scale(0.5)' },
+                            { opacity: 1, transform: 'scale(1)' },
+                            { opacity: 0, transform: 'scale(0.5)' }
+                        ], {
+                            duration: 1000 + Math.random() * 1000,
+                            easing: 'ease-out'
+                        });
+                        
+                        // Hapus sparkle setelah animasi selesai
+                        setTimeout(() => {
+                            if (sparkle.parentNode) {
+                                sparkle.parentNode.removeChild(sparkle);
+                            }
+                        }, 2000);
+                    }
+                }
+            }, 300); // Buat sparkle setiap 300ms
+        }
+        
+        // Tambahkan interaksi mouse: love mengikuti kursor
+        document.addEventListener('mousemove', (e) => {
+            const loves = document.querySelectorAll('.big-love');
+            
+            loves.forEach((love, index) => {
+                // Hitung jarak antara kursor dan love
+                const rect = love.getBoundingClientRect();
+                const loveX = rect.left + rect.width / 2;
+                const loveY = rect.top + rect.height / 2;
+                
+                const distanceX = e.clientX - loveX;
+                const distanceY = e.clientY - loveY;
+                
+                const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+                
+                // Jika kursor dekat dengan love, beri efek tolakan
+                if (distance < 150) {
+                    const force = 150 - distance;
+                    const angle = Math.atan2(distanceY, distanceX);
+                    
+                    const moveX = Math.cos(angle) * force * 0.1;
+                    const moveY = Math.sin(angle) * force * 0.1;
+                    
+                    // Terapkan transformasi sementara
+                    love.style.transform = `translate(${moveX}px, ${moveY}px) ${love.style.transform.split(' ').slice(2).join(' ')}`;
+                    
+                    // Kembalikan ke posisi semula setelah 100ms
+                    setTimeout(() => {
+                        love.style.transform = love.style.transform.replace(`translate(${moveX}px, ${moveY}px)`, '');
+                    }, 100);
+                }
+            });
+        });
+        
+        // Saat halaman dimuat, mulai efek sparkle
+        window.addEventListener('load', createSparkles);
+        
+        // Tambahkan efek saat klik: love melompat
+        document.addEventListener('click', (e) => {
+            const clickLove = document.createElement('div');
+            clickLove.classList.add('big-love');
+            clickLove.innerHTML = '💖';
+            clickLove.style.position = 'absolute';
+            clickLove.style.left = `${e.clientX}px`;
+            clickLove.style.top = `${e.clientY}px`;
+            clickLove.style.fontSize = '5rem';
+            clickLove.style.zIndex = '200';
+            clickLove.style.animation = 'none';
+            
+            document.body.appendChild(clickLove);
+            
+            // Animasi love melompat lalu menghilang
+            const jumpAnimation = clickLove.animate([
+                { transform: 'translateY(0) scale(1)', opacity: 1 },
+                { transform: 'translateY(-100px) scale(1.5)', opacity: 0.8 },
+                { transform: 'translateY(-200px) scale(0.5)', opacity: 0 }
+            ], {
+                duration: 1500,
+                easing: 'ease-out'
+            });
+            
+            jumpAnimation.onfinish = () => {
+                if (clickLove.parentNode) {
+                    clickLove.parentNode.removeChild(clickLove);
+                }
+            };
+        });
+    </script>
+</body>
+</html>
